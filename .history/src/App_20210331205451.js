@@ -1,10 +1,10 @@
 import React, { useState, useMemo } from 'react';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
-import { About } from './components/About';
-import { Home } from './components/Home';
-import { UserContext } from './components/UserContext';
+import { Index } from './pages';
+import { About } from './pages/about';
+import { UserContext } from './UserContext';
 
-function App() {
+function AppRouter() {
   const [user, setUser] = useState(null);
 
   const value = useMemo(() => ({ user, setUser }), [user, setUser]);
@@ -23,7 +23,7 @@ function App() {
           </ul>
         </nav>
         <UserContext.Provider value={value}>
-          <Route path='/' exact component={Home} />
+          <Route path='/' exact component={Index} />
           <Route path='/about/' component={About} />
         </UserContext.Provider>
       </div>
@@ -31,4 +31,4 @@ function App() {
   );
 }
 
-export default App;
+export default AppRouter;

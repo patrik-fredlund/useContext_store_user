@@ -23,7 +23,7 @@ function App() {
           </ul>
         </nav>
         <UserContext.Provider value={value}>
-          <Route path='/' exact component={Home} />
+          <Route path='/' exact component={HTMLObjectElement} />
           <Route path='/about/' component={About} />
         </UserContext.Provider>
       </div>
@@ -31,4 +31,4 @@ function App() {
   );
 }
 
-export default App;
+export default AppRouter;

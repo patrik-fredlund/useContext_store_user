@@ -9,14 +9,7 @@ export const Home = () => {
       <h2>Home</h2>
       <pre>{JSON.stringify(user, null, 2)}</pre>
       {user ? (
-        <button
-          onClick={() => {
-            //call log out
-            setUser(null);
-          }}
-        >
-          Log out{' '}
-        </button>
+        <button>Log out </button>
       ) : (
         <button
           onClick={async () => {

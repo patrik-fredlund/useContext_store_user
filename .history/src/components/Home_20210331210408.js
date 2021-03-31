@@ -12,7 +12,6 @@ export const Home = () => {
         <button
           onClick={() => {
             //call log out
-            setUser(null);
           }}
         >
           Log out{' '}

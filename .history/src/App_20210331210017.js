@@ -22,7 +22,7 @@ function App() {
             </li>
           </ul>
         </nav>
-        <UserContext.Provider value={value}>
+        <UserContext.Provider value={{ value }}>
           <Route path='/' exact component={Home} />
           <Route path='/about/' component={About} />
         </UserContext.Provider>

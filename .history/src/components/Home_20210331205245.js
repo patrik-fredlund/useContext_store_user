@@ -4,6 +4,7 @@ import { login } from './utlis/Login';
 
 export const Home = () => {
   const { user, setUser } = useContext(UserContext);
+
   return (
     <div>
       <h2>Home</h2>
@@ -11,11 +12,11 @@ export const Home = () => {
       {user ? (
         <button
           onClick={() => {
-            //call log out
+            // call logout
             setUser(null);
           }}
         >
-          Log out{' '}
+          logout
         </button>
       ) : (
         <button
@@ -24,7 +25,7 @@ export const Home = () => {
             setUser(user);
           }}
         >
-          Login
+          login
         </button>
       )}
     </div>
